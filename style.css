@@ -22,8 +22,6 @@ input[type="number"] {
 form {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 6;
   max-width: fit-content;
   border: 2px solid black;
   gap: 20px;
@@ -35,4 +33,14 @@ button {
   border: none;
   padding: 4px;
   /* background: none; */
+}
+input:focus {
+  outline: none !important;
+  border-color: black;
+  box-shadow: 0 0 10px black;
+}
+textarea:focus {
+  outline: none !important;
+  border-color: black;
+  box-shadow: 0 0 10px black;
 }

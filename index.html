@@ -19,20 +19,20 @@
   </div>
   <div class="styleBox">
     <form action="#">
-      <label for="country" type="country" id="country">
-        <input type="text" name="country" id="country" placeholder="Country" required>
+      <label for="country" type="country">
+        <input type="text" name="country" id="country" placeholder="Country" pattern="[a-zA-Z]{2,}" onkeyup="validateCountry(country)"oninvalid="this.setCustomValidity('Enter Valid Country.')" required>
       </label>
-      <label for="email" type="email" id="email">
-        <input type="email" name="email" id="email" placeholder="Email" required>
+      <label for="email" type="email">
+        <input type="email" name="email" id="email" placeholder="Email" oninvalid="this.setCustomValidity('Enter Valid Email.')" onkeyup="validateEmail(email)" required>
       </label>
-      <label for="zipcode" type="zipcode" id="zipcode">
-        <input type="number" name="zipcode" id="zipcode" placeholder="Zipcode" required>
+      <label for="zipcode" type="zipcode">
+        <input type="number" name="zipcode" id="zipcode" placeholder="Zipcode" pattern="(\d{5}([\-]\d{4})?)" oninvalid="this.setCustomValidity('Enter Valid Zipcode.')" onkeyup="validateZipcode(zipcode)" required>
       </label>
-      <label for="password" type="password" id="password">
-        <input type="password" name="password" id="password" placeholder="Password" required>
+      <label for="password" type="password">
+        <input type="password" name="password" id="password" placeholder="Password" oninvalid="this.setCustomValidity('Password must contain 8 or more characters, at least one number and one letter.')" onkeyup="validatePassword(password)"required>
       </label>
-      <label for="password" type="password" id="password" >
-        <input type="password" name="password" id="password" placeholder="Re-enter Password" required>
+      <label for="password" type="password">
+        <input type="password" name="password" id="passwordCheck" placeholder="Re-enter Password" onkeyup="validatePasswordCheck(passwordCheck)" required>
       </label>
       <button type="submit">Submit Form</button>
     </form>
