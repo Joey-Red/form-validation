@@ -31,7 +31,7 @@ let validateZipcode = (zipcode) => {
 }
 
 let validatePassword = (password) => {
-  let pattern = /"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/;
+  let pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   if (pattern.exec(passwordInput.value)){
     passwordInput.style.backgroundColor="rgb(46, 204, 113)";
   } else {
